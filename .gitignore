@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# Dependências de build e cache
+dist/
+build/
+.cache/
+.tmp/
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Configurações locais do sistema/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Sistema operacional
+ehthumbs.db
+desktop.ini
+

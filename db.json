@@ -1,0 +1,116 @@
+{
+    "coffee": [
+        {
+            "title": "Black Coffee",
+            "description": "Café preto puro, feito apenas com grãos moídos e água quente. É simples e ideal para apreciar o sabor natural do café.",
+            "ingredients": [
+                "Café"
+            ],
+            "price": 3.0,
+            "image": "https://images.unsplash.com/photo-1494314671902-399b18174975?auto=format&fit=crop&q=80&w=1887",
+            "id": 1
+        },
+        {
+            "title": "Latte",
+            "description": "Uma mistura cremosa de espresso e leite vaporizado, com uma fina camada de espuma por cima. Pode ser servido puro ou com sabores adicionais, como baunilha ou caramelo.",
+            "ingredients": [
+                "Espresso",
+                "Leite vaporizado"
+            ],
+            "price": 4.5,
+            "image": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&q=80&w=1887",
+            "id": 2
+        },
+        {
+            "title": "Cappuccino",
+            "description": "Clássico italiano com partes iguais de espresso, leite vaporizado e espuma. Textura cremosa e sabor equilibrado.",
+            "ingredients": [
+                "Espresso",
+                "Leite vaporizado",
+                "Espuma de leite"
+            ],
+            "price": 5.0,
+            "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1887",
+            "id": 3
+        },
+        {
+            "title": "Espresso",
+            "description": "Café concentrado feito sob pressão. Base para diversas bebidas de café e apreciado por seu sabor intenso.",
+            "ingredients": [
+                "Café"
+            ],
+            "price": 2.5,
+            "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&q=80&w=1887",
+            "id": 4
+        },
+        {
+            "title": "Macchiato",
+            "description": "Espresso manchado com uma pequena quantidade de leite vaporizado. Ideal para quem gosta de sabor forte com um toque suave.",
+            "ingredients": [
+                "Espresso",
+                "Leite vaporizado"
+            ],
+            "price": 4.0,
+            "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1887",
+            "id": 5
+        },
+        {
+            "title": "Mocha",
+            "description": "Combinação deliciosa de espresso, chocolate e leite vaporizado, finalizada com chantilly. Perfeito para quem ama café e chocolate.",
+            "ingredients": [
+                "Espresso",
+                "Leite vaporizado",
+                "Chocolate",
+                "Chantilly"
+            ],
+            "price": 6.0,
+            "image": "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&q=80&w=1887",
+            "id": 6
+        },
+        {
+            "title": "Cold Brew",
+            "description": "Café extraído a frio por longas horas, resultando em uma bebida suave, menos ácida e extremamente refrescante.",
+            "ingredients": [
+                "Café",
+                "Água fria"
+            ],
+            "price": 5.5,
+            "image": "https://images.unsplash.com/photo-1628697413824-606e4654259c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+            "id": 7
+        },
+        {
+            "title": "Iced Latte",
+            "description": "Versão gelada do latte, feita com espresso, leite gelado e gelo. Refrescante e cremosa.",
+            "ingredients": [
+                "Espresso",
+                "Leite",
+                "Gelo"
+            ],
+            "price": 5.0,
+            "image": "https://images.unsplash.com/photo-1636406261371-a5b599369b99?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+            "id": 8
+        },
+        {
+            "title": "Affogato",
+            "description": "Uma sobremesa italiana que combina uma bola de sorvete de baunilha mergulhada em um shot de espresso quente.",
+            "ingredients": [
+                "Espresso",
+                "Sorvete de baunilha"
+            ],
+            "price": 6.5,
+            "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1887",
+            "id": 9
+        },
+        {
+            "title": "Flat White",
+            "description": "Semelhante ao latte, mas com proporção maior de café para leite, resultando em sabor mais intenso e textura sedosa.",
+            "ingredients": [
+                "Espresso",
+                "Leite vaporizado"
+            ],
+            "price": 5.0,
+            "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1887",
+            "id": 10
+        }
+    ]
+}
