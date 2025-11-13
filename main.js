@@ -147,7 +147,7 @@ async function main() {
     root.innerHTML = '';
  
     const nav = document.createElement('nav');
-    nav.classList.add('navbar', 'navbar-light', 'bg-light', 'fixed-top');
+    nav.classList.add('navbar', 'navbar-light', 'bg-body-secondary', 'fixed-top');
 
     const navContainer = document.createElement('div');
     navContainer.classList.add('container', 'd-flex', 'justify-content-between', 'align-items-center');
