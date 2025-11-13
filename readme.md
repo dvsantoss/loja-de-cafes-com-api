@@ -45,7 +45,7 @@ LOJA-DE-CAFE-COM-API/
 ├── 📄 db.json            # Banco de dados simulado com a lista de cafés
 ├── 📄 index.html         # Ponto de entrada (contém apenas a <div id="root">)
 ├── 📄 package.json       # Configurações e scripts do projeto
-└── 📄 Trabalho_3.pdf     # Descrição dos requisitos
+└── 📄 requisitos.pdf     # Descrição dos requisitos
 ```
 
 ---
