@@ -38,6 +38,7 @@ function renderCart() {
         const itemElement = document.createElement('div'); // cada item vai ter esse html
         itemElement.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
 
+        // retornar assim é muito mais simples
         itemElement.innerHTML = `
             <div class="d-flex align-items-center">
                 <img src="${cafe.image}" alt="${cafe.title}"
