@@ -68,64 +68,160 @@ function renderCart() {
 
 // finalização da compra usando um modal
 
+// conteudo do modal formulario
 function renderCheckoutModal() {
     const modalBody = document.getElementById('checkout-body-content');
+
     const cart = getCart();
 
+    modalBody.innerHTML = '';
+
+    // se o carrinho estiver vazio
     if (cart.length === 0) {
-        modalBody.innerHTML = '<p>Seu carrinho está vazio.</p>';
+        const p = document.createElement('p');
+        p.textContent = 'Seu carrinho está vazio.';
+        modalBody.appendChild(p);
         return;
     }
 
     let subtotal = 0;
-    const summaryItems = cart.map(cartItem => {
+
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    // coluna do formulário
+    const colForm = document.createElement('div');
+    colForm.className = 'col-md-7';
+
+    const h4Form = document.createElement('h4');
+    h4Form.textContent = 'Informações de Entrega';
+
+    const form = document.createElement('form');
+    form.id = 'checkout-form';
+    form.noValidate = true; // desabilita validação nativa para usar o bootstrap
+
+    // campo endereço
+    const address = document.createElement('div');
+    address.className = 'mb-3';
+
+    const labelAddress = document.createElement('label');
+    labelAddress.className = 'form-label';
+    labelAddress.setAttribute('for', 'address');
+    labelAddress.textContent = 'Endereço de Entrega';
+
+    const inputAddress = document.createElement('input');
+    inputAddress.type = 'text';
+    inputAddress.className = 'form-control';
+    inputAddress.id = 'address';
+    inputAddress.placeholder = 'Rua, Número, Bairro...';
+    inputAddress.required = true;
+
+    const feedbackAddress = document.createElement('div');
+    feedbackAddress.className = 'invalid-feedback';
+    feedbackAddress.textContent = 'Por favor, insira seu endereço.';
+
+    address.appendChild(labelAddress);
+    address.appendChild(inputAddress);
+    address.appendChild(feedbackAddress);
+
+    // campo pagamento
+    const payment = document.createElement('div');
+    payment.className = 'mb-3';
+
+    const labelPayment = document.createElement('label');
+    labelPayment.className = 'form-label';
+    labelPayment.setAttribute('for', 'payment');
+    labelPayment.textContent = 'Método de Pagamento';
+
+    const selectPayment = document.createElement('select');
+    selectPayment.className = 'form-select';
+    selectPayment.id = 'payment';
+    selectPayment.required = true;
+
+    // select
+    const optionsData = [
+        { val: '', text: 'Selecione...' },
+        { val: 'cartao', text: 'Cartão' },
+        { val: 'pix', text: 'Pix' },
+        { val: 'boleto', text: 'Boleto' }
+    ];
+
+    optionsData.forEach(opt => {
+        const option = document.createElement('option');
+        option.value = opt.val;
+        option.textContent = opt.text;
+        selectPayment.appendChild(option);
+    });
+
+    const feedbackPayment = document.createElement('div');
+    feedbackPayment.className = 'invalid-feedback';
+    feedbackPayment.textContent = 'selecione um método de pagamento.';
+
+    payment.appendChild(labelPayment);
+    payment.appendChild(selectPayment);
+    payment.appendChild(feedbackPayment);
+
+    // monta o formulário
+    form.appendChild(address);
+    form.appendChild(payment);
+    colForm.appendChild(h4Form);
+    colForm.appendChild(form);
+
+
+    // resumo
+    const colSummary = document.createElement('div');
+    colSummary.className = 'col-md-5';
+
+    const h4Summary = document.createElement('h4');
+    h4Summary.textContent = 'Resumo do Pedido';
+
+    const ul = document.createElement('ul');
+    ul.className = 'list-group mb-3';
+
+    // loop para criar os itens da lista
+    cart.forEach(cartItem => {
         const cafe = allCafes.find(c => c.id === cartItem.id);
-        if (!cafe) return '';
-        const itemTotal = cafe.price * cartItem.quantity;
-        subtotal += itemTotal;
+        if (cafe) {
+            const itemTotal = cafe.price * cartItem.quantity;
+            subtotal += itemTotal;
 
-        return `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                ${cafe.title} (x${cartItem.quantity})
-                <span>${itemTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-            </li>
-        `;
-    }).join('');
+            const li = document.createElement('li');
+            li.className = 'list-group-item d-flex justify-content-between align-items-center';
 
-    modalBody.innerHTML = `
-        <div class="row">
-            <div class="col-md-7">
-                <h4>Informações de Entrega</h4>
-                <form id="checkout-form" novalidate>
-                    <div class="mb-3">
-                        <label for="address" class="form-label">Endereço de Entrega</label>
-                        <input type="text" class="form-control" id="address" placeholder="Rua, Número, Bairro..." required>
-                        <div class="invalid-feedback"> insira seu endereço.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="payment" class="form-label">Método de Pagamento</label>
-                        <select class="form-select" id="payment" required>
-                            <option value="">Selecione...</option>
-                            <option value="credit">Cartão</option>
-                            <option value="pix">Pix</option>
-                            <option value="boleto">Boleto</option>
-                        </select>
-                        <div class="invalid-feedback"> escolha um metodo de pagamento.</div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-5">
-                <h4>Resumo do Pedido</h4>
-                <ul class="list-group mb-3">
-                    ${summaryItems}
-                    <li class="list-group-item d-flex justify-content-between list-group-item-dark">
-                        <strong>Total</strong>
-                        <strong>${subtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    `;
+            // texto do item
+            const itemText = document.createTextNode(`${cafe.title} (x${cartItem.quantity})`);
+
+            // preço do item
+            const spanPrice = document.createElement('span');
+            spanPrice.textContent = itemTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+            li.appendChild(itemText);
+            li.appendChild(spanPrice);
+            ul.appendChild(li);
+        }
+    });
+
+    // item do total (geral)
+    const liTotal = document.createElement('li');
+    liTotal.className = 'list-group-item d-flex justify-content-between list-group-item-dark';
+
+    const strongLabel = document.createElement('strong');
+    strongLabel.textContent = 'Total';
+
+    const strongValue = document.createElement('strong');
+    strongValue.textContent = subtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    liTotal.appendChild(strongLabel);
+    liTotal.appendChild(strongValue);
+    ul.appendChild(liTotal);
+
+    colSummary.appendChild(h4Summary);
+    colSummary.appendChild(ul);
+
+    // parte final
+    row.appendChild(colForm);
+    row.appendChild(colSummary);
+    modalBody.appendChild(row);
 }
 
 async function main() {
@@ -145,7 +241,7 @@ async function main() {
     }
 
     root.innerHTML = '';
- 
+
     const nav = document.createElement('nav');
     nav.classList.add('navbar', 'navbar-light', 'bg-body-secondary', 'fixed-top');
 
@@ -168,7 +264,7 @@ async function main() {
             1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
     </svg>
     <span class="ms-1">Carrinho</span>
-`;  
+`;
 
     cartButton.dataset.bsToggle = 'offcanvas';
     cartButton.dataset.bsTarget = '#cart-offcanvas';
