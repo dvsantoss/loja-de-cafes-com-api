@@ -17,19 +17,12 @@ O projeto segue o conceito de **SPA (Single Page Application)**, onde todo o con
 - **Interface Responsiva:** Layout adaptável para mobile e desktop utilizando **Bootstrap 5**.  
 - **Checkout:** Modal de finalização de compra com validação de formulário.
 
-<img width="1919" border-radius=20px height="868" alt="Image" src="https://github.com/user-attachments/assets/38090ade-fe3e-4969-8212-f9b303cdec58" />
-<img width="1919" height="868" alt="Image" src="https://github.com/user-attachments/assets/5e2369a1-cb10-4f7a-803f-701211de0093" />
-<img width="1919" height="867" alt="Image" src="https://github.com/user-attachments/assets/55f6aa6d-441c-4eb8-adeb-207c0f2a18d8" />
-<img width="1919" height="863" alt="Image" src="https://github.com/user-attachments/assets/c1763c0d-4fdc-4bb3-b4e4-205d3fec36d3" />
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5 & CSS3**  
 - **JavaScript (ES6 Modules):** Código modularizado (import/export)  
 - **Bootstrap 5:** Para estilização e componentes (Navbar, Cards, Offcanvas, Modal)  
 - **JSON Server:** Para simular uma API REST localmente  
-
----
 
 ## 📂 Estrutura do Projeto
 
@@ -50,8 +43,6 @@ LOJA-DE-CAFE-COM-API/
 ├── 📄 package.json       # Configurações e scripts do projeto
 └── 📄 requisitos.pdf     # Descrição dos requisitos
 ```
-
----
 
 ## ⚙️ Como Rodar o Projeto
 
@@ -90,3 +81,23 @@ Se você usa o **VS Code**:
 - Gerenciamento de estado local com **LocalStorage**.  
 - Conceito de **Modularização em JavaScript**.  
 - Integração de lógica JS com componentes visuais do **Bootstrap**.
+  
+
+# API Local:
+
+<img src="https://github.com/user-attachments/assets/38090ade-fe3e-4969-8212-f9b303cdec58" alt="Image" width="1000" />
+
+# Carrinho:
+
+<img src="https://github.com/user-attachments/assets/5e2369a1-cb10-4f7a-803f-701211de0093" alt="Image" width="1000" />
+
+
+# Verificador de Campos:
+
+<img src="https://github.com/user-attachments/assets/55f6aa6d-441c-4eb8-adeb-207c0f2a18d8" alt="Image" width="1000" />
+
+
+# Finalização da compra removendo os dados do carrinho do localStorage:
+
+<img src="https://github.com/user-attachments/assets/c1763c0d-4fdc-4bb3-b4e4-205d3fec36d3" alt="Image" width="1000" />
+
