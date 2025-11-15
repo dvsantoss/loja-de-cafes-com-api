@@ -5,7 +5,7 @@ O objetivo principal foi construir uma aplicação utilizando **JavaScript Puro*
 
 O projeto segue o conceito de **SPA (Single Page Application)**, onde todo o conteúdo é gerado dinamicamente dentro de uma única `div` no HTML.
 
----
+<img width="1919" height="874" alt="Image" src="https://github.com/user-attachments/assets/79890684-1205-4c74-8228-15143f06d14c" />
 
 ## 🚀 Funcionalidades
 
@@ -17,7 +17,10 @@ O projeto segue o conceito de **SPA (Single Page Application)**, onde todo o con
 - **Interface Responsiva:** Layout adaptável para mobile e desktop utilizando **Bootstrap 5**.  
 - **Checkout:** Modal de finalização de compra com validação de formulário.
 
----
+<img width="1919" border-radius=20px height="868" alt="Image" src="https://github.com/user-attachments/assets/38090ade-fe3e-4969-8212-f9b303cdec58" />
+<img width="1919" height="868" alt="Image" src="https://github.com/user-attachments/assets/5e2369a1-cb10-4f7a-803f-701211de0093" />
+<img width="1919" height="867" alt="Image" src="https://github.com/user-attachments/assets/55f6aa6d-441c-4eb8-adeb-207c0f2a18d8" />
+<img width="1919" height="863" alt="Image" src="https://github.com/user-attachments/assets/c1763c0d-4fdc-4bb3-b4e4-205d3fec36d3" />
 
 ## 🛠️ Tecnologias Utilizadas
 
